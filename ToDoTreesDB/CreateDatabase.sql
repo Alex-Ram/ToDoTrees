@@ -13,15 +13,19 @@ GO
 CREATE TABLE Categories
 (
 	[CategoryID]	int			PRIMARY KEY		IDENTITY,
-	[Name]			varchar(35)	NOT NULL,
-	[ParentID]		int			REFERENCES Categories(CategoryID)	NULL
+	[ParentID]		int			REFERENCES Categories(CategoryID)	NULL,
+	[Name]			varchar(35)	NOT NULL
 )
+GO
+
+INSERT INTO Categories(ParentID, [Name])
+VALUES (NULL, 'All')
 GO
 
 CREATE TABLE ToDoItems
 (
-	[ID]			int			PRIMARY KEY		IDENTITY,
-	[Category]		int			REFERENCES Categories(CategoryID),
+	[ToDoItemID]	int			PRIMARY KEY		IDENTITY,
+	[CategoryID]	int			REFERENCES Categories(CategoryID),
 	[Description]	varchar(50)	NOT NULL,
 	[IsCompleted]	bit			NOT NULL		DEFAULT(0)
 )
