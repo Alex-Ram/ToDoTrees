@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgToDos = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAddToDo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,17 +36,17 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.txtDescrip = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgToDos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgToDos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 98);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1176, 644);
-            this.dataGridView1.TabIndex = 0;
+            this.dgToDos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgToDos.Location = new System.Drawing.Point(20, 98);
+            this.dgToDos.Margin = new System.Windows.Forms.Padding(6);
+            this.dgToDos.Name = "dgToDos";
+            this.dgToDos.Size = new System.Drawing.Size(1176, 644);
+            this.dgToDos.TabIndex = 0;
             // 
             // btnDelete
             // 
@@ -58,6 +58,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete Checked";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // btnAddToDo
             // 
@@ -69,6 +70,7 @@
             this.btnAddToDo.TabIndex = 2;
             this.btnAddToDo.Text = "Add Todo";
             this.btnAddToDo.UseVisualStyleBackColor = false;
+            this.btnAddToDo.Click += new System.EventHandler(this.btnAddToDo_Click_1);
             // 
             // label1
             // 
@@ -101,6 +103,7 @@
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
             // txtDescrip
             // 
@@ -130,12 +133,12 @@
             this.Controls.Add(this.btnAddCat);
             this.Controls.Add(this.btnAddToDo);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgToDos);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgToDos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,7 +146,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgToDos;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAddToDo;
         private System.Windows.Forms.Label label1;
