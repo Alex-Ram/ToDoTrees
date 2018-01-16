@@ -15,7 +15,8 @@ namespace ToDoTrees
         /// <returns>The connection string.</returns>
         public static SqlConnection GetConnection()
         {
-            return new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=ToDoTreesDB;Integrated Security=True");
+            //            return new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=ToDoTreesDB;Integrated Security=True");
+            return new SqlConnection("Data Source=localhost; Initial Catalog=ToDoTreesDB; Trusted_Connection=True;");
         }
     }
 }
